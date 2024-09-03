@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Community Chat</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Community Chat</h1>
+    <div id="chat">
+        <!-- Formulario para crear usuario -->
+        <form id="createUserForm">
+            <input type="text" id="username" placeholder="Nombre de usuario">
+            <button type="submit">Crear Usuario</button>
+        </form>
+        
+        <!-- Formulario para crear grupo -->
+        <form id="createGroupForm">
+            <input type="text" id="groupname" placeholder="Nombre del grupo">
+            <button type="submit">Crear Grupo</button>
+        </form>
+
+        <!-- Formulario para unirse a grupo -->
+        <form id="joinGroupForm">
+            <input type="text" id="usernameJoin" placeholder="Nombre de usuario">
+            <input type="text" id="groupnameJoin" placeholder="Nombre del grupo">
+            <button type="submit">Unirse a Grupo</button>
+        </form>
+
+        <!-- Formulario para enviar mensaje -->
+        <form id="sendMessageForm">
+            <input type="text" id="usernameMsg" placeholder="Nombre de usuario">
+            <input type="text" id="groupnameMsg" placeholder="Nombre del grupo">
+            <input type="text" id="message" placeholder="Mensaje">
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+
+        <!-- Mostrar mensajes -->
+        <div id="messages"></div>
+    </div>
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
